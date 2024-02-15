@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#seccion-juego-tennis {
+    height: 100vh;
+    width: 100%;
+}
+
+.contenedor-principal {
+    width: 100%;
+    height: 100%;
+}
