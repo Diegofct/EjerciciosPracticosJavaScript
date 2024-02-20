@@ -18,16 +18,23 @@
                 <button class="botones">Ejercicio Anterior</button>
                 <div class="content-container">
                     <div class="arriba-content-container">
-                        <input type="text" placeholder="Juegos ganados por jugador A:">
-                        <input type="text" placeholder="Juegos ganados por jugador B:">
+                        <input id="puntaje-jugador-a" type="text" placeholder="Juegos ganados por jugador A:">
+                        <input id="puntaje-jugador-b" type="text" placeholder="Juegos ganados por jugador B:">
+                        <button onclick="validarResultadoTennis()" id="btn-validar">Validar</button>
                     </div>
                     <div class="abajo-content-container">
-                        <span class="text-span">texto con JavaScript</span>
+                        <p>Juegos de A: <span id="puntos-jugador-a"></span></p>
+                        <p>Juegos de B: <span id="puntos-jugador-b"></span></p>
+                        <span id="texto-alternativo"></span>
                     </div>
                 </div>
                 <button class="botones">Siguiente Ejercicio</button>
             </div>
         </div>
+    </section>
+
+    <section>
+
     </section>
     
 </body>
