@@ -33,8 +33,47 @@
         </div>
     </section>
 
-    <section>
+    <section id="palabra-mas-larga">
+        <div class="contenedor-principal">
+            <div class="arriba-contenedor-principal">
+                <h1>Palabra mas larga</h1>
+            </div>
+            <div class="under-container">
+                <button class="botones">Ejercicio Anterior</button>
+                <div class="content-container">
+                    <div class="arriba-content-container">
+                        <input id="primer-palabra" type="text" placeholder="Escriba cualquier palabra">
+                        <input id="segunda-palabra" type="text" placeholder="Escriba otra palabra">
+                        <button onclick="buscarPalabraMasLarga()" id="btn-validar">Palabra mas larga</button>
+                    </div>
+                    <div class="abajo-content-container">
+                        <span id="texto"></span>
+                    </div>
+                </div>
+                <button class="botones">Siguiente Ejercicio</button>
+            </div>
+        </div>
+    </section>
 
+    <section id="digito-verificador">
+        <div class="contenedor-principal">
+            <div class="arriba-contenedor-principal">
+                <h1>Digito Verificador</h1>
+            </div>
+            <div class="under-container">
+                <button class="botones">Ejercicio Anterior</button>
+                <div class="content-container">
+                    <div class="arriba-content-container">
+                        <input id="numero-rol" type="text" placeholder="Escriba el número rol para buscar el dígito verificador">
+                        <button onclick="obtenerDigitoVerificador()" id="btn-validar">Obtener dígito verificador</button>
+                    </div>
+                    <div class="abajo-content-container">
+                        <p>Digito verificador: <span id="mostrar-digito"></span></p>
+                    </div>
+                </div>
+                <button class="botones">Siguiente Ejercicio</button>
+            </div>
+        </div>
     </section>
     
 </body>
