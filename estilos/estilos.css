@@ -6,7 +6,8 @@
 
 #seccion-juego-tennis,
 #palabra-mas-larga,
-#digito-verificador {
+#digito-verificador,
+#adn {
     height: 100vh;
     width: 100%;
     display: grid;
@@ -34,6 +35,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.under-container-adn {
+    display: flex;
+    flex-direction: column;
 }
 
 .content-container {
@@ -65,5 +71,16 @@
 .abajo-content-container {
     height: 50%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.abajo-content-container table {
+    height: 80%;
+    width: 80%;
     text-align: center;
+    border: 1px solid;
 }

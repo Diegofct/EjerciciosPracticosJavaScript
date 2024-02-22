@@ -75,6 +75,56 @@
             </div>
         </div>
     </section>
+
+    <section id="adn">
+        <div class="contenedor-principal">
+            <div class="arriba-contenedor-principal">
+                <h1 class="p-3">ADN VERIFICATOR</h1>
+            </div>
+            <div class="under-container">
+                <button class="botones">Ejercicio Anterior</button>
+                <div class="content-container" >
+                    <div class="arriba-content-container">
+                        <label for="autorCromosoma">Ingrese el cromosoma</label>
+                        <input type="text" id="autorCromosoma" placeholder="00010111110110100101" required>
+                    </div>
+                    <div class="abajo-content-container">
+                        <h2>SOSPECHOSOS</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Cromosomas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Pedro</td>
+                                    <td>00000101010101010101</td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>Juan</td>
+                                    <td>00101010101101110111</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Diego</td>
+                                    <td>00100010010000001001</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button id="buttonVerify" class="btn btn-danger btn-lg" onclick="verificarADN()">Verificar</button>
+                        <div id="verify-text" class="m-3"></div>
+                    </div>
+                </div>
+                <button class="botones">Siguiente Ejercicio</button>
+            </div>
+            
+        </div>
+    </section>
     
 </body>
 </html>
