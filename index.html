@@ -5,126 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript - Ejercicios práticos</title>
     <link rel="stylesheet" href="estilos/estilos.css">
-    <script defe src="main.js"></script>
 </head>
 <body>
     
     <section id="seccion-juego-tennis">
-        <div class="contenedor-principal">
-            <div class="arriba-contenedor-principal">
-                <h1>Set de Tennis</h1>
-            </div>
-            <div class="under-container">
-                <button class="botones">Ejercicio Anterior</button>
-                <div class="content-container">
-                    <div class="arriba-content-container">
-                        <input id="puntaje-jugador-a" type="text" placeholder="Juegos ganados por jugador A:">
-                        <input id="puntaje-jugador-b" type="text" placeholder="Juegos ganados por jugador B:">
-                        <button onclick="validarResultadoTennis()" id="btn-validar">Validar</button>
-                    </div>
-                    <div class="abajo-content-container">
-                        <p>Juegos de A: <span id="puntos-jugador-a"></span></p>
-                        <p>Juegos de B: <span id="puntos-jugador-b"></span></p>
-                        <span id="texto-alternativo"></span>
-                    </div>
-                </div>
-                <button class="botones">Siguiente Ejercicio</button>
-            </div>
-        </div>
     </section>
 
     <section id="palabra-mas-larga">
-        <div class="contenedor-principal">
-            <div class="arriba-contenedor-principal">
-                <h1>Palabra mas larga</h1>
-            </div>
-            <div class="under-container">
-                <button class="botones">Ejercicio Anterior</button>
-                <div class="content-container">
-                    <div class="arriba-content-container">
-                        <input id="primer-palabra" type="text" placeholder="Escriba cualquier palabra">
-                        <input id="segunda-palabra" type="text" placeholder="Escriba otra palabra">
-                        <button onclick="buscarPalabraMasLarga()" id="btn-validar">Palabra mas larga</button>
-                    </div>
-                    <div class="abajo-content-container">
-                        <span id="texto"></span>
-                    </div>
-                </div>
-                <button class="botones">Siguiente Ejercicio</button>
-            </div>
-        </div>
     </section>
 
     <section id="digito-verificador">
-        <div class="contenedor-principal">
-            <div class="arriba-contenedor-principal">
-                <h1>Digito Verificador</h1>
-            </div>
-            <div class="under-container">
-                <button class="botones">Ejercicio Anterior</button>
-                <div class="content-container">
-                    <div class="arriba-content-container">
-                        <input id="numero-rol" type="text" placeholder="Escriba el número rol para buscar el dígito verificador">
-                        <button onclick="obtenerDigitoVerificador()" id="btn-validar">Obtener dígito verificador</button>
-                    </div>
-                    <div class="abajo-content-container">
-                        <p>Digito verificador: <span id="mostrar-digito"></span></p>
-                    </div>
-                </div>
-                <button class="botones">Siguiente Ejercicio</button>
-            </div>
-        </div>
     </section>
 
     <section id="adn">
-        <div class="contenedor-principal">
-            <div class="arriba-contenedor-principal">
-                <h1 class="p-3">ADN VERIFICATOR</h1>
-            </div>
-            <div class="under-container">
-                <button class="botones">Ejercicio Anterior</button>
-                <div class="content-container" >
-                    <div class="arriba-content-container">
-                        <label for="autorCromosoma">Ingrese el cromosoma</label>
-                        <input type="text" id="autorCromosoma" placeholder="00010111110110100101" required>
-                    </div>
-                    <div class="abajo-content-container">
-                        <h2>SOSPECHOSOS</h2>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nombre</th>
-                                    <th>Cromosomas</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>1</th>
-                                    <td>Pedro</td>
-                                    <td>00000101010101010101</td>
-                                </tr>
-                                <tr>
-                                    <th>2</th>
-                                    <td>Juan</td>
-                                    <td>00101010101101110111</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Diego</td>
-                                    <td>00100010010000001001</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button id="buttonVerify" onclick="verificarADN()">Verificar</button>
-                        <div id="verify-text" class="m-3"></div>
-                    </div>
-                </div>
-                <button class="botones">Siguiente Ejercicio</button>
-            </div>
-            
-        </div>
     </section>
     
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
