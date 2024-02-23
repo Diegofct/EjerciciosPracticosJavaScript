@@ -1,4 +1,4 @@
-const btnValidar = document.getElementById('btn-validar');
+// const btnValidar = document.getElementById('btn-validar');
 
 const cargarElementosHtml=()=> {
     const seccionTennis = document.getElementById('seccion-juego-tennis')
@@ -21,7 +21,7 @@ const cargarElementosHtml=()=> {
                         <span id="texto-alternativo"></span>
                     </div>
                 </div>
-                <button id="btn-siguiente-tennis" class="botones">Siguiente Ejercicio</button>
+                <button id="btn-siguiente" class="botones" onClick="mostrarSiguienteEjercicio()">Siguiente Ejercicio</button>
             </div>
         </div>
     `
@@ -44,7 +44,7 @@ const cargarElementosHtml=()=> {
                         <span id="texto"></span>
                     </div>
                 </div>
-                <button id="btn-siguiente" class="botones">Siguiente Ejercicio</button>
+                <button id="btn-siguiente" class="botones" onClick="mostrarSiguienteEjercicio()">Siguiente Ejercicio</button>
             </div>
         </div>
     `
@@ -65,7 +65,7 @@ const cargarElementosHtml=()=> {
                         <p>Digito verificador: <span id="mostrar-digito"></span></p>
                     </div>
                 </div>
-                <button id="btn-siguiente" class="botones">Siguiente Ejercicio</button>
+                <button id="btn-siguiente" class="botones" onClick="mostrarSiguienteEjercicio()">Siguiente Ejercicio</button>
             </div>
         </div>
     `
@@ -115,7 +115,7 @@ const cargarElementosHtml=()=> {
                         <div id="verify-text" class="m-3"></div>
                     </div>
                 </div>
-                <button id="btn-siguiente" class="botones">Siguiente Ejercicio</button>
+                <button id="btn-siguiente" class="botones" onClick="mostrarSiguienteEjercicio()">Siguiente Ejercicio</button>
             </div>
         </div>
     `
@@ -128,6 +128,37 @@ const cargarElementosHtml=()=> {
     btnAnteriorTennis.style.display='none'
 
 }
+
+//Funcion para mostrar las siguientes secciones
+const mostrarSiguienteEjercicio = () => {
+    const seccionTennis = document.getElementById('seccion-juego-tennis');
+    const seccionPalabraLarga = document.getElementById('palabra-mas-larga');
+    const seccionDigitioVerificador = document.getElementById('digito-verificador');
+    const seccionADN = document.getElementById('adn');
+    const btnSiguiente = document.getElementById('btn-siguiente')
+
+    displayTennis = window.getComputedStyle(seccionTennis, null).display;
+    displayPalabraLarga = window.getComputedStyle(seccionPalabraLarga, null).display;
+    displayDigitoVerificador = window.getComputedStyle(seccionDigitioVerificador, null).display;
+    displayADN = window.getComputedStyle(seccionADN, null).display;
+
+    if (displayTennis === "grid") {
+        seccionTennis.style.display = 'none';
+        seccionPalabraLarga.style.display = 'grid';
+    } else if (displayPalabraLarga === "grid") {
+        seccionPalabraLarga.style.display = 'none';
+        seccionDigitioVerificador.style.display = 'grid';
+    } else if (displayDigitoVerificador === "grid") {
+        seccionDigitioVerificador.style.display = 'none';
+        seccionADN.style.display = 'grid';
+        btnSiguiente.style.display = 'none'
+    } else {
+        seccionADN.style.display = 'none';
+        seccionTennis.style.display = 'grid';
+    }
+};
+
+
 
 
 //Ejercicio set de tennis
