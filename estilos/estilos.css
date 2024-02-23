@@ -12,6 +12,9 @@
     width: 100%;
     display: grid;
     place-items: center;
+    background: url(../img/4k.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .contenedor-principal {
@@ -21,12 +24,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: antiquewhite;
 }
 
 .arriba-contenedor-principal {
     width: 100%;
     height: 10%;
     text-align: center;
+    font-size: 2rem;
 }
 
 .under-container {
@@ -35,6 +40,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.under-container>button {
+    width: 10%;
+    height: 5%;
+    cursor: pointer;
+    background: linear-gradient(to bottom right, #72c97e 40%, #10bac0);
+    color: white;
+    font-weight: 700;
 }
 
 .under-container-adn {
@@ -49,7 +63,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: aqua;
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    border-radius: 15px;
+
 }
 
 .arriba-content-container {
@@ -66,6 +83,7 @@
 .arriba-content-container input {
     width: 60%;
     height: 15%;
+    border-radius: 10px;
 }
 
 .abajo-content-container {
