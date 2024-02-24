@@ -7,6 +7,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+}
+
 #seccion-juego-tennis,
 #palabra-mas-larga,
 #digito-verificador,
@@ -15,9 +25,7 @@
     width: 100%;
     display: grid;
     place-items: center;
-    background: url(../img/imagen.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
+
 }
 
 .contenedor-principal {
