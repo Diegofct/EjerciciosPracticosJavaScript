@@ -134,7 +134,6 @@ const mostrarSiguienteEjercicio = () => {
     const seccionPalabraLarga = document.getElementById('palabra-mas-larga');
     const seccionDigitioVerificador = document.getElementById('digito-verificador');
     const seccionADN = document.getElementById('adn');
-    const btnSiguiente = document.getElementById('btn-siguiente')
 
     displayTennis = window.getComputedStyle(seccionTennis, null).display;
     displayPalabraLarga = window.getComputedStyle(seccionPalabraLarga, null).display;
@@ -150,7 +149,6 @@ const mostrarSiguienteEjercicio = () => {
     } else if (displayDigitoVerificador === "grid") {
         seccionDigitioVerificador.style.display = 'none';
         seccionADN.style.display = 'grid';
-        btnSiguiente.style.display = 'none'
     } else {
         seccionADN.style.display = 'none';
         seccionTennis.style.display = 'grid';
