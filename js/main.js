@@ -8,7 +8,7 @@ const cargarElementosHtml=()=> {
                 <h1>Set de Tennis</h1>
             </div>
             <div class="under-container">
-                <button id="btn-anterior-tennis" class="botones">Ejercicio Anterior</button>
+                <button id="btn-anterior-tennis" class="botones" onClick="mostrarEjercicioAnterior()">Ejercicio Anterior</button>
                 <div class="content-container">
                     <div class="arriba-content-container">
                         <input id="puntaje-jugador-a" type="text" placeholder="Juegos ganados por jugador A:">
@@ -33,7 +33,7 @@ const cargarElementosHtml=()=> {
                 <h1>Palabra mas larga</h1>
             </div>
             <div class="under-container">
-                <button id="btn-anterior" class="botones">Ejercicio Anterior</button>
+                <button id="btn-anterior" class="botones" onClick="mostrarEjercicioAnterior()">Ejercicio Anterior</button>
                 <div class="content-container">
                     <div class="arriba-content-container">
                         <input id="primer-palabra" type="text" placeholder="Escriba cualquier palabra">
@@ -55,7 +55,7 @@ const cargarElementosHtml=()=> {
                 <h1>Digito Verificador</h1>
             </div>
             <div class="under-container">
-                <button id="btn-anterior" class="botones">Ejercicio Anterior</button>
+                <button id="btn-anterior" class="botones" onClick="mostrarEjercicioAnterior()">Ejercicio Anterior</button>
                 <div class="content-container">
                     <div class="arriba-content-container">
                         <input id="numero-rol" type="text" placeholder="Escriba el número rol para buscar el dígito verificador">
@@ -77,7 +77,7 @@ const cargarElementosHtml=()=> {
                 <h1 class="p-3">ADN Verificador</h1>
             </div>
             <div class="under-container">
-                <button id="btn-anterior" class="botones">Ejercicio Anterior</button>
+                <button id="btn-anterior" class="botones" onClick="mostrarEjercicioAnterior()">Ejercicio Anterior</button>
                 <div class="content-container" >
                     <div class="arriba-content-container">
                         <label for="autorCromosoma">Ingrese el cromosoma</label>
@@ -115,7 +115,6 @@ const cargarElementosHtml=()=> {
                         <div id="verify-text" class="m-3"></div>
                     </div>
                 </div>
-                <button id="btn-siguiente" class="botones" onClick="mostrarSiguienteEjercicio()">Siguiente Ejercicio</button>
             </div>
         </div>
     `
@@ -158,7 +157,30 @@ const mostrarSiguienteEjercicio = () => {
     }
 };
 
+//Funcion mostrar ejercicio anterior
+const mostrarEjercicioAnterior = () => {
+    const seccionTennis = document.getElementById('seccion-juego-tennis');
+    const seccionPalabraLarga = document.getElementById('palabra-mas-larga');
+    const seccionDigitioVerificador = document.getElementById('digito-verificador');
+    const seccionADN = document.getElementById('adn');
+    const btnSiguiente = document.getElementById('btn-siguiente')
 
+    displayTennis = window.getComputedStyle(seccionTennis, null).display;
+    displayPalabraLarga = window.getComputedStyle(seccionPalabraLarga, null).display;
+    displayDigitoVerificador = window.getComputedStyle(seccionDigitioVerificador, null).display;
+    displayADN = window.getComputedStyle(seccionADN, null).display;
+
+    if (displayPalabraLarga === "grid") {
+        seccionPalabraLarga.style.display = 'none'
+        seccionTennis.style.display = 'grid'
+    } else if (displayDigitoVerificador === "grid") {
+        seccionDigitioVerificador.style.display = 'none'
+        seccionPalabraLarga.style.display = 'grid'
+    } else if (displayADN === "grid") {
+        seccionADN.style.display = 'none'
+        seccionDigitioVerificador.style.display = 'grid'
+    }
+}
 
 
 //Ejercicio set de tennis
